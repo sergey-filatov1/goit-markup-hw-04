@@ -334,6 +334,17 @@ color: #2e2f42;
   padding: 32px 0;
 }
 
+.team-info .social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.team-info .social-link:hover,
+.team-info .social-link:focus {
+  background-color: #404bbf;
+}
+
 .team-section {
   background-color: #F4F4FD;
   padding: 120px 0;
@@ -445,6 +456,11 @@ color: #2e2f42;
 .page-footer {
   background-color: #2e2f42;
   padding: 100px 0;
+}
+
+.page-footer .social-list {
+  display: flex;
+  gap: 16px;
 }
 
 .footer-container {
