@@ -302,9 +302,7 @@ color: #2e2f42;
 
 .social-list {
   display: flex;
-  justify-content: center;
   gap: 24px;
-  margin-top: 8px;
 }
 
 .social-item {
@@ -325,7 +323,7 @@ color: #2e2f42;
 
 .social-link:hover,
 .social-link:focus {
-  background-color: #404bbf;
+  background-color: #31d0aa;
 }
 
 .social-icon {
@@ -449,6 +447,15 @@ color: #2e2f42;
   padding: 100px 0;
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-info {
+  margin-right: 120px;
+}
+
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -459,6 +466,17 @@ color: #2e2f42;
   letter-spacing: 0.02em;
   color: #F4F4FD;
 }
+
+.social-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--light-color, #ffffff);
+  margin-bottom: 16px;
+}
+
+
 
 .icon-soc{
   fill: #F4F4FD;
