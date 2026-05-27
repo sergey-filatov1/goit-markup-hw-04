@@ -215,6 +215,17 @@ button:focus {
   padding: 0;
 }
 
+.icon-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -227,7 +238,6 @@ button:focus {
   display: flex;
   gap: 24px;
 }
-
 
 .benefit-title {
   font-weight: 700;
@@ -265,7 +275,6 @@ button:focus {
 .benefit-text {
   text-align: left;
 }
-
 
 .team-title {
   font-weight: 700;
@@ -318,8 +327,42 @@ button:focus {
   text-align: center;
 }
 
+.social-list{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
 
+.social-item{
+  width: 40px;
+  height: 40px;
+}
 
+.social-link{
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color, #4d5ae5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover, .social-link:focus{
+  background-color:#404bbf;
+}
+
+.social-icon{
+  fill: var(--icon-color,#f4f4fd);
+  width: 16px;
+  height: 16px;
+
+}
+
+.team-card-content{
+  padding: 32px 0;
+}
 
 .portfolio-section {
   padding: 120px 0;
@@ -350,6 +393,14 @@ button:focus {
   border: 1px solid #E7E9FC;
   border-radius: 4px;
   padding-bottom: 32px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover{
+  box-shadow: 
+  0px 1px 6px rgba(46, 47, 66, 0.08),
+  0px 1px 1px rgba(46, 47, 66, 0.16),
+  0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-image-wrapper {
@@ -358,33 +409,26 @@ button:focus {
 }
 
 .portfolio-overlay {
-  position: absolute;
-  /* делает overlay слоем поверх картинки */
-  top: 0;
-  /* прижимает к верхнему краю контейнера */
-  left: 0;
-  /* прижимает к левому краю контейнера */
-  width: 100%;
-  /* растягивает overlay на всю ширину */
-  height: 100%;
-  /* растягивает overlay на всю высоту */
-  background-color: rgba(77, 90, 229, 0.8);
-  /* полупрозрачный фон */
-  color: #fff;
-  /* цвет текста */
+  position: absolute; /* делает overlay слоем поверх картинки */
+  top: 0; /* прижимает к верхнему краю контейнера */
+  left: 0; /* прижимает к левому краю контейнера */
+  width: 100%; /* растягивает overlay на всю ширину */
+  height: 100%; /* растягивает overlay на всю высоту */
+  background-color: rgba(77, 90, 229, 0.8); /* полупрозрачный фон */
+  color: var(--icon-color, #f4f4fd); /* цвет текста */
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding: 40px;
-  opacity: 0;
-  /* скрыт по умолчанию */
-  transition: opacity 250ms ease-in-out;
-  /* плавное появление */
+  padding: 40px 32px;
+  /*opacity: 0; /* скрыт по умолчанию */
+  transform: translateY(100%);
+  /*transition: opacity 250ms ease-in-out;/* плавное появление */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-image-wrapper:hover .portfolio-overlay {
-  opacity: 1;
-  /* overlay становится видимым */
+  transform: translateY(0%);
+  /*opacity: 1; /* overlay становится видимым */
 }
 
 
